@@ -3,7 +3,7 @@
 ---
 ### [😇 Git](https://slides.com/danielsuleiman/git#/)
 - [Домашняя работа 🏠](./git/readme.md)
-- [Git Quiz 🎲](https://play.kahoot.it/v2/?quizId=3f5db8b0-4a4f-4c9b-9011-e001ddfefcd0)
+- [Learn Branching 🎲](https://learngitbranching.js.org/?locale=ru_RU)
 ### 👨‍💻 Ретроспектива. Оценка знаний
 - [ES6 Features](https://slides.com/danielsuleiman/es6#/)
 - [Подборка задач различного уровня](./es6/codewars.md)
