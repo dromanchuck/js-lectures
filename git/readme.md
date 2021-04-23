@@ -13,3 +13,14 @@
 - https://learn.epam.com/detailsPage?id=601f195a-d408-4439-a16d-0630ed2a412e
 - https://www.codeschool.com/courses/try-git
 - https://www.codeschool.com/courses/git-real
+- https://githowto.com/ru
+
+### Читать. обязательно!
+- https://githowto.com/ru/checking_status
+- https://githowto.com/ru/making_changes
+- https://githowto.com/ru/staging_changes
+- https://githowto.com/ru/staging_and_committing
+- https://githowto.com/ru/commiting_changes
+- https://githowto.com/ru/undoing_local_changes
+- https://githowto.com/ru/undoing_staged_changes
+- https://githowto.com/ru/navigating_branches
