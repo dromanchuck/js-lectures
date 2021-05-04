@@ -17,8 +17,8 @@
 
 ### [👩‍👧 JS классы. Наследование](https://sulemanof.github.io/js-lectures/js-classes/presentation/#/)
 
-- [Домашняя работа 🏠](./js-classes/readme.md)
-- [ES6 features quiz 🎲](https://play.kahoot.it/v2/?quizId=bfa4492b-c0a2-4cf2-a859-51a4327a4a92)
+- [Полезные ссылки🏠](./js-classes/readme.md)
+- [Домашнее задание](./js-classes/homework.js)
 
 ### [🌦 Асинхронное программирование. Промисы. Fetch](https://sulemanof.github.io/js-lectures/async-development/presentation/#/)
 
