@@ -1,4 +1,4 @@
-et buttonAdd = document.createElement("button");
+let buttonAdd = document.createElement("button");
 buttonAdd.innerHTML = "Добавить вопрос";
 // buttonAdd.disabled = true; задизэйблить кнопку
 

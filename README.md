@@ -39,7 +39,7 @@
 
 ### [🏠DOM](https://learn.javascript.ru/document)
 
-- [Домашняя работа (задачи)🏠](./dom-bom/homework.js)
+- [Домашняя работа 🏠](./dom-bom/quizGenerator.md)
 - [Полезные ссылки 🔗](./dom-bom/useful-links.md)
 
 ### [🏷 Создаём свой компонент. Практика](./dom-bom/inClassTask.md)
