@@ -64,7 +64,7 @@
 
 ### [🚀 React](https://slides.com/danielsuleiman/react#/)
 
-- [Домашняя работа (Начинаем)🏠](./start/readme.md)
+- [Домашняя работа (Начинаем)🏠](./react/start/readme.md)
 
 <!-- - [Домашняя работа (State, Event handling) 🏠](./react/homework-1.md)
 - [Домашняя работа (Forms, Lists) 🏠](./react/homework-2.md)
