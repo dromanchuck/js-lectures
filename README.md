@@ -52,8 +52,6 @@
 
 ### [🔧 NPM. Работа со сторонними модулями](https://slides.com/danielsuleiman/npm#/)
 
-- [Домашняя работа 🏠](./npm/task.md)
-
 ### [🧪 Основы тестирования. Модульное тестированиe JS](https://slides.com/danielsuleiman/testing)
 
 - [Домашняя работа 🏠](./testing/readme.md)
@@ -66,10 +64,10 @@
 
 ### [🚀 React](https://slides.com/danielsuleiman/react#/)
 
-- [Домашняя работа (State, Event handling) 🏠](./react/homework-1.md)
+<!-- - [Домашняя работа (State, Event handling) 🏠](./react/homework-1.md)
 - [Домашняя работа (Forms, Lists) 🏠](./react/homework-2.md)
 - [Работа в классе 💻](./react/in-class-work.md)
-- [Полезные ссылки 🔗](./react/useful-links.md)
+- [Полезные ссылки 🔗](./react/useful-links.md) -->
 
 ### [✈ React Router](https://slides.com/danielsuleiman/react-router#/)
 
