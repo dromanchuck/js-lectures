@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
-import Form from './components/Form';
+import { Test } from "./Test";
+import { Todolist } from "./Todolist";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Form />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <h1>Test</h1>
+      <Test />
+      <h1>TODO list</h1>
+      <Todolist />
+    </div>
+  );
 }
 
 export default App;
