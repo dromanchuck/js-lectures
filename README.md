@@ -66,8 +66,8 @@
 
 - [Домашняя работа (Начинаем)🏠](./react/start/readme.md)
 - [Домашняя работа (State, Event handling) 🏠](./react/homework-1.md)
+- [Домашняя работа (Conditional rendering, Lifting state up)🏠](./react/homework-2.md)
 <!-- -
-- [Домашняя работа (Forms, Lists) 🏠](./react/homework-2.md)
 - [Работа в классе 💻](./react/in-class-work.md)
 - [Полезные ссылки 🔗](./react/useful-links.md) -->
 

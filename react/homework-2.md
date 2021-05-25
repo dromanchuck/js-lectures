@@ -1,22 +1,38 @@
 ### Emoji
+
 ---
-Выша задача реализовать поиск эмоджи по следующим данным - [json](./emojiList.json)
+
+Выша задача реализовать список эмоджи по следующим данным - [json](./emojiList.json)
 
 Шаги по реализации:
-- настройте рабочую директорию (вы можете использовать `create-react-app` или настроить самостоятельно с помощью `webpack` и `babel`);
-- файл `index.js` должен быть входной точкой в приложение, где вы вызываете функцию `ReactDOM.render`;
-- компонент `Form` должен принимать строку поиска по емэджи (искать можно как по названию - `title`, так и по ключевым словам - `keywords`);
-- компонент `EmojiCOntainer` должен рендерить другой компонент - `EmojiRow`;
-- компонент `EmojiRow` должен отображать иконку эмоджи и название: 
 
-    ![](./emoji/emoji-row.png)
-    + вы можете отображать стандартную эмоджи либо ->;
-    + отображать картинку по URL [![](https://data.jsdelivr.com/v1/package/npm/emojione/badge)](https://www.jsdelivr.com/package/npm/emojione) (используйте след путь : `//cdn.jsdelivr.net/emojione/assets/png/${codePointHex}.png`, где `codePointHex` можно получить как `symbol.codePointAt(0).toString(16)`)
-- используйте лимит отображения эмоджи - напрмер не больше 15 найденных! (можно реализовать дродаун с выбором лимита строк);
----
-Финальный пример:
+- настройте рабочую директорию (вы можете использовать `create-react-app` или скопировать уже существующий реакт проект);
+- компонент `EmojiItem` должен отображать иконку эмоджи и название:
 
+  ![](./emoji/emoji-row.png)
 
-![Final example](./emoji/emoji-search.gif)
----
-[Homework guidelines](../homework-guidelines.md)
+- компонент `EmojiList` должен отображать список компонентов `EmojiItem`
+
+**_Задание со звездочкой_**
+
+Реализовать поиск emoji. Поиск должен работать как по `title` так и по `keywords`
+Шаги по реализации:
+
+- Добавить компонент Input для ввода текста
+- Разместить его состояние. Можно размещать прямо внутри компонента Input (как мы делали с Form в туду листе),
+  или разместить выше как мы это делали в компоненте Test
+- Использовать filter для отрисовки списка
+
+Пример поиска:
+
+## ![Пример поиска](./emoji/emoji-search.gif)
+
+[Гайд по выпонению домашнего задания](../homework-guidelines.md)
+
+### Читать
+
+- [Подъём состояния](https://ru.reactjs.org/docs/lifting-state-up.html)
+- [Еще разок про списки и ключи](https://ru.reactjs.org/docs/lists-and-keys.html)
+- [Условный рендеринг](https://ru.reactjs.org/docs/conditional-rendering.html)
+- [Композиция против наследования](https://ru.reactjs.org/docs/composition-vs-inheritance.html)
+- [Философия React](https://ru.reactjs.org/docs/thinking-in-react.html)

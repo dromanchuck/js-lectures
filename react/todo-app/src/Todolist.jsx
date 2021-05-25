@@ -1,35 +1,37 @@
 import { useState } from "react";
 
+import { Form, ListItem } from "./components";
 import "./App.css";
 
-import { Button } from "./components/Button/Button";
-import { Input } from "./components/Input/Input";
+function getID() {
+  return "_" + Math.random().toString(36).substr(2, 9);
+}
 
 export const Todolist = () => {
-  const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
 
-  const onClick = () => {
+  function onClickForm(text) {
     if (!text) {
       alert("Введи же уже что-нибудь!");
       return;
     }
 
-    setTodos([...todos, text]);
-    setText("");
-  };
+    const todo = {
+      text,
+      id: getID(),
+      done: false,
+      checked: false,
+    };
 
-  const _onChange = (event) => {
-    setText(event.target.value);
-  };
+    setTodos([...todos, todo]);
+  }
 
   return (
     <div className="App">
-      <Input _value={text} _onChange={_onChange} />
-      <Button _click={onClick} _text="Add" _priority="primary" />
-      <ul>
-        {todos.map((item, index) => (
-          <li key={index}>{item}</li>
+      <Form submit={onClickForm} />
+      <ul style={{ listStyleType: "none" }}>
+        {todos.map((item) => (
+          <ListItem key={item.id}>{item.text}</ListItem>
         ))}
       </ul>
     </div>
