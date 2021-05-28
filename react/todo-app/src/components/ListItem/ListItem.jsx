@@ -1,11 +1,15 @@
-import { Component, useState } from "react";
+import { Component, useState, useEffect, PureComponent } from "react";
 
-export const ListItem1 = ({ children }) => {
+export const ListItem = ({ children }) => {
   const [checked, setChecked] = useState(false);
 
   const onClickCheckbox = () => {
     setChecked(!checked);
   };
+
+  useEffect(() => {
+    console.log("componentDidMount");
+  }, []);
 
   return (
     <li>
@@ -15,13 +19,15 @@ export const ListItem1 = ({ children }) => {
   );
 };
 
-export class ListItem extends Component {
+export class ListItem1 extends PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
       checked: false,
     };
+
+    console.log("constructor");
   }
 
   onClickCheckbox = () => {
@@ -29,9 +35,22 @@ export class ListItem extends Component {
     this.setState({ ...this.state, checked: !checked });
   };
 
+  async componentDidMount() {
+    console.log("componentDidMount");
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
+  }
+
   render() {
     const { children } = this.props;
     const { checked } = this.state;
+    console.log("render");
 
     return (
       <li>
