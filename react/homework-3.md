@@ -7,14 +7,6 @@
 Для всех заданий используем один реакт проект (вы можете использовать `create-react-app` или скопировать уже существующий реакт проект).
 Каждое задание должно находиться в отдельной папке и разместить каждое задание в App.js разделив их тегом h1
 
-'Например
-App.js
-
-<h1>Posts</h2>
-<PostList/>
-<h1>Images</h1>
-<ImageList/>'
-
 1. Выша задача реализовать список постов по данным API [{JSON} Placeholder](https://jsonplaceholder.typicode.com/).
    Шаги по реализации:
 
@@ -49,3 +41,5 @@ App.js
 - [Eще про рендерирнг реакта](https://bxnotes.ru/conspect/lib/react/react-notes/rendering/)
 - [useEffect](https://ru.reactjs.org/docs/hooks-effect.html)
 - [Краткий обзор хуков](https://ru.reactjs.org/docs/hooks-overview.html)
+
+P.S. [Код из занятия](./todo-app)
