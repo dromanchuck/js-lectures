@@ -68,6 +68,7 @@
 - [Домашняя работа (State, Event handling) 🏠](./react/homework-1.md)
 - [Домашняя работа (Conditional rendering, Lifting state up)🏠](./react/homework-2.md)
 - [Домашняя работа (Component life cycle)](./react/homework-3.md)
+- [Домашняя работа (Refs)](./react/homework-4.md)
 <!-- -
 - [Работа в классе 💻](./react/in-class-work.md)
 - [Полезные ссылки 🔗](./react/useful-links.md) -->

@@ -1,3 +1,24 @@
-export const Input = ({ _value, _onChange }) => {
-  return <input value={_value} onChange={_onChange} />;
+import { useEffect, useRef } from 'react';
+
+export const Input = ({
+  inputValue,
+  onChangeValue,
+  onKeyPressValue,
+}) => {
+  const refInputEpt = useRef();
+
+  useEffect(() => {
+    if (refInputEpt.current) {
+      refInputEpt.current.focus();
+    }
+  }, []);
+
+  return (
+    <input
+      ref={refInputEpt}
+      value={inputValue}
+      onChange={onChangeValue}
+      onKeyPress={onKeyPressValue}
+    />
+  );
 };
