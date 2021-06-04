@@ -75,6 +75,8 @@
 
 ### [✈ React Router](https://slides.com/danielsuleiman/react-router#/)
 
+- [Домашняя работа](./react/router.md)
+
 ### [🗽 Redux](https://slides.com/danielsuleiman/redux/#/)
 
 - [Домашняя работа 🏠](./redux/Homework.md)

@@ -23,6 +23,7 @@ export const Todolist = () => {
       text,
       id: getID(),
       checked: false,
+      selected: false,
     };
 
     setTodos([...todos, todo]);
@@ -39,6 +40,62 @@ export const Todolist = () => {
     );
   };
 
+  const setSelected = ({
+    selected,
+    idishnik,
+  }) => {
+    console.log('setSelected Todolist');
+    setTodos(
+      todos.map((item) =>
+        item?.id === idishnik
+          ? { ...item, selected }
+          : item,
+      ),
+    );
+  };
+
+  const removeItem = (idishnik) => {
+    console.log('removeItem Todolist');
+    console.log(idishnik);
+
+    setTodos(
+      todos.filter((todo) => {
+        if (todo.id === idishnik) {
+          return false;
+        }
+
+        return true;
+      }),
+    );
+  };
+
+  const deleteAllSelected = () => {
+    setTodos(
+      todos.filter((todo) => {
+        if (todo.selected) {
+          return false;
+        }
+
+        return true;
+      }),
+    );
+  };
+
+  const checkAllSelected = () => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.selected) {
+          todo.checked = true;
+          todo.selected = false;
+        }
+
+        return todo;
+      }),
+    );
+  };
+
+  let isCheckedSomth = todos.some((item) => item);
+
   return (
     <div className="App">
       <Form submit={onClickForm} />
@@ -48,11 +105,24 @@ export const Todolist = () => {
             key={item.id}
             checked={item.checked}
             setChecked={setChecked}
-            idishnik={item.id}>
+            idishnik={item.id}
+            removeItem={removeItem}
+            selected={item.selected}
+            setSelected={setSelected}>
             {item.text}
           </ListItem>
         ))}
       </ul>
+      <button
+        disabled={false}
+        onClick={deleteAllSelected}>
+        Удалить выделенные
+      </button>
+      <button
+        disabled={false}
+        onClick={checkAllSelected}>
+        Выполнить выделенные
+      </button>
     </div>
   );
 };
