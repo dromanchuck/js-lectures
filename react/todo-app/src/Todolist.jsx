@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import { Form, ListItem } from './components';
 import './App.css';
+import { Context } from './App';
 
 function getID() {
   return (
@@ -11,6 +12,10 @@ function getID() {
 
 export const Todolist = () => {
   const [todos, setTodos] = useState([]);
+  const contextValue = useContext(Context);
+  const theme = contextValue.theme;
+  const themes = contextValue.themes;
+  //const { theme, themes } = useContext(Context);
 
   function onClickForm(text) {
     console.log('onClickForm Todolist');
@@ -94,10 +99,11 @@ export const Todolist = () => {
     );
   };
 
-  let isCheckedSomth = todos.some((item) => item);
-
   return (
     <div className="App">
+      <h1 style={{ color: themes[theme].header }}>
+        TODO list
+      </h1>
       <Form submit={onClickForm} />
       <ul style={{ listStyleType: 'none' }}>
         {todos.map((item) => (

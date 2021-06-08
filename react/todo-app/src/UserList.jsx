@@ -1,38 +1,66 @@
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState, memo } from 'react';
+
+import { Modal } from './components/Modal';
 
 export const UserList = memo(() => {
   const [users, setUsers] = useState([]);
 
+  const [isModalOpened, setIsModalOpened] =
+    useState(false);
+
+  const [selectedUrl, setSelectedUrl] =
+    useState('');
+
   useEffect(async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/photos");
+    const response = await fetch(
+      'https://jsonplaceholder.typicode.com/photos',
+    );
     const usersResponse = await response.json();
 
     setUsers(usersResponse);
   }, []);
 
+  const onClickImage = (url) => () => {
+    setSelectedUrl(url);
+    setIsModalOpened(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpened(false);
+  };
+
   return (
-    <ol>
-      {users.map((item) => (
-        <Img urlec={item.url} />
-      ))}
-    </ol>
+    <>
+      {isModalOpened ? (
+        <Modal closeModal={closeModal}>
+          <Img urlec={selectedUrl} />
+        </Modal>
+      ) : null}
+      <ol>
+        {users.map((item, index) => (
+          <Img
+            key={index}
+            urlec={item.url}
+            onClick={onClickImage(item.url)}
+          />
+        ))}
+      </ol>
+    </>
   );
 });
 
-const Img = ({ urlec }) => {
-  const [isBig, setIsBig] = useState(false);
-
+const Img = ({ urlec, onClick }) => {
   const onClickImage = () => {
-    setIsBig(!isBig);
+    onClick();
   };
 
   return (
     <img
       onClick={onClickImage}
       style={{
-        width: isBig ? "500px" : "100px",
-        height: isBig ? "500px" : "100px",
-        transition: "all 0.3s linear",
+        width: '100px',
+        height: '100px',
+        transition: 'all 0.3s linear',
       }}
       src={urlec}
     />
