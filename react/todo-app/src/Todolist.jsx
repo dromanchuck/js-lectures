@@ -1,8 +1,17 @@
 import { useContext, useState } from 'react';
+import {
+  useHistory,
+  useParams,
+} from 'react-router-dom';
+import {
+  useDispatch,
+  useSelector,
+} from 'react-redux';
 
 import { Form, ListItem } from './components';
 import './App.css';
 import { Context } from './App';
+import { ACTIONS } from './redux/constants';
 
 function getID() {
   return (
@@ -11,11 +20,20 @@ function getID() {
 }
 
 export const Todolist = () => {
-  const [todos, setTodos] = useState([]);
   const contextValue = useContext(Context);
   const theme = contextValue.theme;
   const themes = contextValue.themes;
-  //const { theme, themes } = useContext(Context);
+  const hist = useHistory();
+  const params = useParams();
+  const dispatch = useDispatch();
+
+  const todos = useSelector(
+    (store) => store.todos,
+  );
+
+  console.log({ todos });
+
+  function setTodos() {}
 
   function onClickForm(text) {
     console.log('onClickForm Todolist');
@@ -31,18 +49,16 @@ export const Todolist = () => {
       selected: false,
     };
 
-    setTodos([...todos, todo]);
+    dispatch({ type: ACTIONS.ADD_TODO, todo });
   }
 
   const setChecked = ({ checked, idishnik }) => {
     console.log('setChecked Todolist');
-    setTodos(
-      todos.map((item) =>
-        item?.id === idishnik
-          ? { ...item, checked }
-          : item,
-      ),
-    );
+    dispatch({
+      type: ACTIONS.SET_CHECKED,
+      checked,
+      idishnik,
+    });
   };
 
   const setSelected = ({
@@ -99,10 +115,15 @@ export const Todolist = () => {
     );
   };
 
+  function goBack() {
+    hist.push('/');
+  }
+
   return (
     <div className="App">
+      <button onClick={goBack}>{'<-'}</button>
       <h1 style={{ color: themes[theme].header }}>
-        TODO list
+        TODO list {`for ${params.name}`}
       </h1>
       <Form submit={onClickForm} />
       <ul style={{ listStyleType: 'none' }}>

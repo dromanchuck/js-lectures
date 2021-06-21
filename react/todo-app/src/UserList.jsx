@@ -1,9 +1,11 @@
 import { useEffect, useState, memo } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { Modal } from './components/Modal';
 
 export const UserList = memo(() => {
   const [users, setUsers] = useState([]);
+  const history = useHistory();
 
   const [isModalOpened, setIsModalOpened] =
     useState(false);
@@ -20,7 +22,7 @@ export const UserList = memo(() => {
     setUsers(usersResponse);
   }, []);
 
-  const onClickImage = (url) => () => {
+  const onClickImage = (url) => {
     setSelectedUrl(url);
     setIsModalOpened(true);
   };
@@ -29,19 +31,28 @@ export const UserList = memo(() => {
     setIsModalOpened(false);
   };
 
+  const onClickGoToTodoList = () => {
+    history.push('/todolist/jack');
+  };
+
   return (
     <>
       {isModalOpened ? (
         <Modal closeModal={closeModal}>
           <Img urlec={selectedUrl} />
+          <Img urlec={selectedUrl} />
+          <Img urlec={selectedUrl} />
         </Modal>
       ) : null}
+      <button onClick={onClickGoToTodoList}>
+        Open todo list
+      </button>
       <ol>
         {users.map((item, index) => (
           <Img
             key={index}
             urlec={item.url}
-            onClick={onClickImage(item.url)}
+            onClick={onClickImage}
           />
         ))}
       </ol>
@@ -51,7 +62,7 @@ export const UserList = memo(() => {
 
 const Img = ({ urlec, onClick }) => {
   const onClickImage = () => {
-    onClick();
+    onClick(urlec);
   };
 
   return (

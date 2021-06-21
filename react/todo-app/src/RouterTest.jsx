@@ -5,12 +5,20 @@ import {
 } from 'react-router-dom';
 
 import { UserList } from './UserList';
+import { Todolist } from './Todolist';
+import { Test } from './Test';
 
 export const RouterTest = () => {
   return (
     <Router>
       <Route exact path="/">
         <UserList />
+      </Route>
+      <Route exact path="/todolist">
+        <Test />
+      </Route>
+      <Route exact path="/todolist/:name">
+        <Todolist />
       </Route>
     </Router>
   );
@@ -31,7 +39,19 @@ const Button = styled.button`
   transition: all 0.3s;
 
   ${({ type }) =>
-    type === 'second' ? `background: gray;` : ''}
+    type === 'second'
+      ? `
+    border-radius: 0;
+    background: gray;
+    `
+      : ''}
+
+  ${({ isActive }) =>
+    isActive
+      ? ``
+      : `
+    opacity: 0.5;
+  `}
 
   &:hover {
     border: 1px solid black;

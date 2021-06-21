@@ -1,9 +1,9 @@
 import { createContext, useState } from 'react';
+import { Provider } from 'react-redux'; ///
 
-import { Test } from './Test';
-import { Todolist } from './Todolist';
-import { UserList } from './UserList';
 import { RouterTest } from './RouterTest';
+
+import { store } from './redux'; ///
 
 const themes = {
   black: {
@@ -25,23 +25,25 @@ function App() {
   };
 
   return (
-    <Context.Provider value={{ themes, theme }}>
-      <div
-        style={{
-          background: themes[theme].background,
-        }}>
-        {/* <h1>Test</h1>
+    <Provider store={store}>
+      <Context.Provider value={{ themes, theme }}>
+        <div
+          style={{
+            background: themes[theme].background,
+          }}>
+          {/* <h1>Test</h1>
         <Test /> */}
 
-        {/* <Todolist /> */}
-        {/* <h1>USER LIST</h1>
+          {/* <Todolist /> */}
+          {/* <h1>USER LIST</h1>
         <UserList /> */}
-        {/* <button onClick={onClickTheme}>
+          {/* <button onClick={onClickTheme}>
           {theme}
         </button> */}
-        <RouterTest />
-      </div>
-    </Context.Provider>
+          <RouterTest />
+        </div>
+      </Context.Provider>
+    </Provider>
   );
 }
 
