@@ -1,8 +1,10 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
+
 import {
   useHistory,
   useParams,
 } from 'react-router-dom';
+
 import {
   useDispatch,
   useSelector,
@@ -28,7 +30,7 @@ export const Todolist = () => {
   const dispatch = useDispatch();
 
   const todos = useSelector(
-    (store) => store.todos,
+    (store) => store.todolistReducer.todos,
   );
 
   console.log({ todos });
