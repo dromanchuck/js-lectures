@@ -7,12 +7,16 @@ import {
 import { UserList } from './UserList';
 import { Todolist } from './Todolist';
 import { Test } from './Test';
+import { Photo } from './Photo';
 
 export const RouterTest = () => {
   return (
     <Router>
       <Route exact path="/">
         <UserList />
+      </Route>
+      <Route exact path="/photos/:id">
+        <Photo />
       </Route>
       <Route exact path="/todolist">
         <Test />

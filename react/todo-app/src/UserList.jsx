@@ -19,7 +19,9 @@ export const UserList = memo(() => {
     (state) => state.photosReducer.photos,
   );
 
-  console.log({ photos });
+  const error = useSelector(
+    (state) => state.photosReducer.error,
+  );
 
   const [isModalOpened, setIsModalOpened] =
     useState(false);
@@ -32,6 +34,12 @@ export const UserList = memo(() => {
       type: ACTIONS.GET_PHOTOS_REQUEST,
     });
   }, []);
+
+  useEffect(() => {
+    if (error) {
+      alert(error);
+    }
+  }, [error]);
 
   const onClickImage = (url) => {
     setSelectedUrl(url);
@@ -65,6 +73,7 @@ export const UserList = memo(() => {
               key={index}
               urlec={item.url}
               onClick={onClickImage}
+              id={item.id}
             />
           ))
         ) : (
@@ -75,9 +84,11 @@ export const UserList = memo(() => {
   );
 });
 
-const Img = ({ urlec, onClick }) => {
+const Img = ({ urlec, onClick, id }) => {
+  const history = useHistory();
+
   const onClickImage = () => {
-    onClick(urlec);
+    history.push(`/photos/${id}`);
   };
 
   return (
