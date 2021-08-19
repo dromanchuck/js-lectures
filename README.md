@@ -13,7 +13,11 @@
 - [Подборка задач различного уровня](./es6/codewars.md)
 - [Домашняя работа 🏠](./es6/readme.md)
 - [JS screening quiz 🎲](https://play.kahoot.it/v2/?quizId=f73697a2-fd7f-4bcd-863c-6cbf9f646b6f)
+
+### [👨‍💻Вспоминаем циклы и массивы](https://learn.javascript.ru/array)
+- [Домашняя работа (задачи)🏠](./es6/array.js)
 - [Задания на циклы и массивы](./es6/arrayAndLoop.js)
+- [Полезные ссылки 🔗](./es6/useful-links.md)
 
 ### [👩‍👧 JS классы. Наследование](https://sulemanof.github.io/js-lectures/js-classes/presentation/#/)
 
