@@ -31,11 +31,6 @@
 - [Полезные ссылки 🔗](./async-development/useful-links.md)
 - [JS quiz 🎲](https://play.kahoot.it/v2/?quizId=21a15928-427c-45f0-a326-6eb55c5d2092)
 
-### [👨‍💻Массивы](https://learn.javascript.ru/array)
-
-- [Домашняя работа (задачи)🏠](./es6/array.js)
-- [Полезные ссылки 🔗](./es6/useful-links.md)
-
 ### [👨‍💻Функции](https://learn.javascript.ru/function-basics)
 
 - [Домашняя работа (задачи)🏠](./es6/functions.js)
