@@ -5,3 +5,5 @@
 - [JavaScript Promises and Async/Await (EN)](https://medium.com/jspoint/javascript-promises-and-async-await-as-fast-as-possible-d7c8c8ff0abc) - как это работает
 - [Компоненты URL](https://learn.javascript.ru/url)
 - [Promise](https://learn.javascript.ru/async)
+- [Async/await](https://learn.javascript.ru/async-await)
+- [Микротаски](https://learn.javascript.ru/microtask-queue)
