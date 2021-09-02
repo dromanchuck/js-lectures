@@ -1,5 +1,8 @@
 Вам необходимо создать приложение по поиску погоды:
-- используйте бесплатное [REST API](https://weatherstack.com/) для данных;
+- используйте бесплатное [REST API](https://openweathermap.org/api) для данных;
+- для поиска по городам используйте следующий 
+ url `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=58b6f7c78582bffab3936dac99c31b25&units=metric`
+- Например для получение погоды по Минску [https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=58b6f7c78582bffab3936dac99c31b25&units=metric](https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=58b6f7c78582bffab3936dac99c31b25&units=metric)
 - создайте `index.html` с разметкой:
     - html `input` & `label`
     - html `button`
@@ -10,6 +13,6 @@
     - когда пользователь кликает кнопку `Поиск` или нажимает `Enter` на клавиатуре после ввода строки поиска, он должен получить таблицу с данными о погоде в выбранном городе;
     - подумайте о грамотной валидации полей;
     
-## Итоговый пример, как может выглядеть ваше приложение:
+## Итоговый пример, как может выглядеть ваше приложение (только поиск по городам, без страны):
 
 ![homework example](./homework-demo.gif)
