@@ -22,6 +22,7 @@
 - [Домашнее задание](./js-classes/homework.js)
 
 ### [🌦 Асинхронное программирование. Промисы. Fetch](./async-development/main.md)
+### [🌦 Асинхронное программирование. Async/await](./async-development/async.md)
 
 ### [👨‍💻Функции](https://learn.javascript.ru/function-basics)
 
