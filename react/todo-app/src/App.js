@@ -1,49 +1,84 @@
-import { createContext, useState } from 'react';
-import { Provider } from 'react-redux'; ///
+import React from "react";
 
-import { RouterTest } from './RouterTest';
+import { TweetCard } from "./components/TweetCard";
+import "./App.css";
 
-import { store } from './redux'; ///
+const tweets = [
+  {
+    name: "Dan",
+    nickName: "@dan_abramov",
+    date: "7 Sep",
+    post: "asdfasdfasdfasdf",
+    avatarUrl:
+      "https://static.toiimg.com/thumb/msid-67586673,widt…de-75,imgsize-3918697,pt-32,y_pad-40/67586673.jpg",
 
-const themes = {
-  black: {
-    header: 'white',
-    background: 'black',
+    replyCount: 12,
+    retweetCount: 10,
+    likes: 10,
   },
-  white: { header: 'black', background: 'white' },
-};
+  {
+    name: "Dan",
+    nickName: "@dan_abramov",
+    date: "7 Sep",
+    post: "Woke up from a vivid dream about the people from the first team i worked on. As if we’re working on something else now. I was the youngest, and there was this sense… like i want to earn their respect. Like hey, look. I can do this too. See? And they’re like yea, you’re right.",
+    avatarUrl:
+      "https://static.toiimg.com/thumb/msid-67586673,widt…de-75,imgsize-3918697,pt-32,y_pad-40/67586673.jpg",
 
-export const Context = createContext();
+    replyCount: 12,
+    retweetCount: 10,
+    likes: 10,
+  },
+  {
+    name: "Dan",
+    nickName: "@dan_abramov",
+    date: "7 Sep",
+    post: "ashdfklahskldfhakljsdhflkjhasdkl",
+    avatarUrl:
+      "https://static.toiimg.com/thumb/msid-67586673,widt…de-75,imgsize-3918697,pt-32,y_pad-40/67586673.jpg",
+
+    replyCount: 12,
+    retweetCount: 10,
+    likes: 10,
+  },
+];
 
 function App() {
-  const [theme, setTheme] = useState('white');
-
-  const onClickTheme = () => {
-    setTheme(
-      theme === 'white' ? 'black' : 'white',
-    );
-  };
-
   return (
-    <Provider store={store}>
-      <Context.Provider value={{ themes, theme }}>
-        <div
-          style={{
-            background: themes[theme].background,
-          }}>
-          {/* <h1>Test</h1>
-        <Test /> */}
+    <div className="App">
+      {tweets.map((tweet) => {
+        const {
+          name,
+          nickName,
+          date,
+          post,
+          avatarUrl,
+          replyCount,
+          retweetCount,
+          likes,
+        } = tweet;
 
-          {/* <Todolist /> */}
-          {/* <h1>USER LIST</h1>
-        <UserList /> */}
-          {/* <button onClick={onClickTheme}>
-          {theme}
-        </button> */}
-          <RouterTest />
-        </div>
-      </Context.Provider>
-    </Provider>
+        return (
+          <TweetCard
+            name={name}
+            nickName={
+              nickName
+            }
+            date={date}
+            post={post}
+            avatarUrl={
+              avatarUrl
+            }
+            replyCount={
+              replyCount
+            }
+            retweetCount={
+              retweetCount
+            }
+            likes={likes}
+          />
+        );
+      })}
+    </div>
   );
 }
 
