@@ -13,9 +13,9 @@
 
 3. Сделать красивый дизайн =)
 
-###Учим react
+### Учим react
 
-[Привет, мир](https://ru.reactjs.org/docs/hello-world.html)
-[JSX](https://ru.reactjs.org/docs/introducing-jsx.html)
-[Рендеринг](https://ru.reactjs.org/docs/rendering-elements.html)
-[Компоненты и пропсы](https://ru.reactjs.org/docs/components-and-props.html)
+- [Привет, мир](https://ru.reactjs.org/docs/hello-world.html)
+- [JSX](https://ru.reactjs.org/docs/introducing-jsx.html)
+- [Рендеринг](https://ru.reactjs.org/docs/rendering-elements.html)
+- [Компоненты и пропсы](https://ru.reactjs.org/docs/components-and-props.html)
