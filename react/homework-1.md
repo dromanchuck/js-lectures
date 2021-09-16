@@ -60,7 +60,11 @@
 [Общие шаги по выполнению д/з](../homework-guidelines.md)
 
 ### Читать
+  ![](./react-life-cycle.png)
 
-[Состояние компонента](https://ru.reactjs.org/docs/hooks-state.html)
-[Обработка событий](https://ru.reactjs.org/docs/hooks-state.html)
-[Списки](https://ru.reactjs.org/docs/lists-and-keys.html)
+- [Состояние компонента](https://ru.reactjs.org/docs/hooks-state.html)
+- [Обработка событий](https://ru.reactjs.org/docs/hooks-state.html)
+- [Списки](https://ru.reactjs.org/docs/lists-and-keys.html)
+- [Условный рендеринг](https://ru.reactjs.org/docs/conditional-rendering.html)
+- [Формы](https://ru.reactjs.org/docs/forms.html)
+- [Подъем состояния](https://ru.reactjs.org/docs/lifting-state-up.html)
