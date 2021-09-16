@@ -22,15 +22,33 @@
 #### 2. Компонент для отображения времени: 
 #####  Шаги по выполнению
 
-- создать компонент, которые показывает статическое время
+- создать компонент, которые показывает статическое [время](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString)
 - ![time](./time.png)
+- создать state в constructor, чтобы строка времени была динамической (например `this.state = { time:  new Date().toLocaleTimeString() };`)
+- в методе жизненного цикла componentDidMount сделать обновления состояние времени через 1 секунду (setInterval + setState)
 
-
-
+---
 
 Финальное решение должно выглядеть так:
---![Final example](./time.gif)
--- 
+- ![Final example](./time.gif)
+
+---
+
+
+---
+
+#### 3. Компонент таймер: 
+#####  Шаги по выполнению
+
+
+
+---
+
+Финальное решение должно выглядеть так:
+- ![Final example](./timer.gif)
+
+---
+
 [Общие шаги по выполнению д/з](../homework-guidelines.md)
 
 ### Читать
