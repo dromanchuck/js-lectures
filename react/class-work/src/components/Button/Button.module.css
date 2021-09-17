@@ -1,0 +1,26 @@
+.primary {
+  color: white;
+  background-color: blue;
+  width: 200px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.secondary {
+  color: blue;
+  background-color: white;
+
+  border: 1px solid blue;
+  width: 200px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.text {
+  color: blue;
+  background: none;
+  border: none;
+  width: 200px;
+  height: 100px;
+  font-size: 20px;
+}
