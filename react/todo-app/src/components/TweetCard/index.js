@@ -1,1 +1,0 @@
-export { TweetCard } from "./TweetCard";
