@@ -58,3 +58,4 @@
 - [Условный рендеринг](https://ru.reactjs.org/docs/conditional-rendering.html)
 - [Композиция против наследования](https://ru.reactjs.org/docs/composition-vs-inheritance.html)
 - [Философия React](https://ru.reactjs.org/docs/thinking-in-react.html)
+- [useEffect hook](https://ru.reactjs.org/docs/hooks-effect.html)
