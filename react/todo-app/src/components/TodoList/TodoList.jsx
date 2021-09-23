@@ -1,6 +1,8 @@
 import React from "react";
 
 import { Form } from "../Form";
+import { ListItem } from "../ListItem/ListItem";
+import styles from "./TodoList.module.css";
 
 export class TodoList extends React.Component {
   constructor(props) {
@@ -20,17 +22,29 @@ export class TodoList extends React.Component {
     this.setState({ todos: newTodos });
   };
 
+  onClickDelete = (id) => {
+    const filteredTodos = this.state.todos.filter(
+      (item) => item.id !== id
+    );
+
+    this.setState({ todos: filteredTodos });
+  };
+
   render() {
     return (
-      <div>
+      <div className={styles.container}>
+        <h1 className={styles.title}>
+          TODODODO list
+        </h1>
         <Form onClick={this.onClickAdd} />
         {this.state.todos.map((item) => {
           return (
-            <div key={item.id}>
-              <p style={{ fontSize: 50 }}>
-                {item.text}
-              </p>
-            </div>
+            <ListItem
+              key={item.id}
+              text={item.text}
+              id={item.id}
+              onClickDelete={this.onClickDelete}
+            />
           );
         })}
       </div>
