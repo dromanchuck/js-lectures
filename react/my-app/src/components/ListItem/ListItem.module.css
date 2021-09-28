@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: 1px solid blue;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 50px;
+}
+
+.remove {
+  font-size: 50px;
+  cursor: pointer;
+
+  transition: all 0.3s linear;
+}
+
+.remove:hover {
+  cursor: pointer;
+  color: red;
+
+  animation: rotate 0.3s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
