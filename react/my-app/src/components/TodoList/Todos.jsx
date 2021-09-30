@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Form } from "../Form";
 import { Button } from "../Button";
@@ -27,6 +27,10 @@ export function TodoList() {
     if (!isLoading) {
       localStorage.setItem("todos", JSON.stringify(todos));
     }
+
+    return () => {
+      console.log("unMount");
+    };
   }, [todos, isLoading]);
 
   const onClickAdd = (todoshka) => {
