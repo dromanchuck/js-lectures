@@ -21,10 +21,7 @@
 ### [🌦 Асинхронное программирование. Промисы. Fetch](./async-development/main.md)
 ### [🌦 Асинхронное программирование. Async/await](./async-development/async.md)
 
-### [👨‍💻Функции](https://learn.javascript.ru/function-basics)
-
-- [Домашняя работа (задачи)🏠](./es6/functions.js)
-- [Полезные ссылки 🔗](./es6/useful-links-functions.md)
+### [👨‍💻Функции](./es6/funcionts_main.md)
 
 ### [🏠DOM](https://learn.javascript.ru/document)
 
