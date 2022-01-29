@@ -1,4 +1,4 @@
-[
+export const emojies = [
   {
     "title": "100",
     "symbol": "💯",
