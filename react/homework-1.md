@@ -1,4 +1,4 @@
-#### 1. Реализуйте компонент кликер:
+<!-- #### 1. Реализуйте компонент кликер:
 
 - создайте компонент следующего вида:
 - ![Clicker](./clicker.png)
@@ -61,17 +61,17 @@
 - создать компонент `EmojiList` должен отображать список компонентов `EmojiItem` (этот компонент принимает как пропс массив эмодзи)
 - использовать [json эмодзи](./emojiList.json)
 
-[Общие шаги по выполнению д/з](../homework-guidelines.md)
+[Общие шаги по выполнению д/з](../homework-guidelines.md) -->
 
 ### Читать
 
 ![](./react-life-cycle.png)
 
-- [Состояние компонента](https://ru.reactjs.org/docs/hooks-state.html)
-- [Обработка событий](https://ru.reactjs.org/docs/hooks-state.html)
-- [Списки](https://ru.reactjs.org/docs/lists-and-keys.html)
+- [Состояние и жизненный компонента](https://ru.reactjs.org/docs/state-and-lifecycle.html)
 - [Условный рендеринг](https://ru.reactjs.org/docs/conditional-rendering.html)
 - [Формы](https://ru.reactjs.org/docs/forms.html)
 - [Подъем состояния](https://ru.reactjs.org/docs/lifting-state-up.html)
+- [Композиция против наследования](https://ru.reactjs.org/docs/composition-vs-inheritance.html)
+- [Типизация react events](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events)
 
-[КОД ЗАНЯТИЯ](./class-work)
+<!-- [КОД ЗАНЯТИЯ](./class-work) -->
