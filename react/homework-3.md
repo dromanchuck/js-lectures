@@ -1,11 +1,11 @@
 ### Posts
-
+<!-- 
 ---
 
 ВНИМАНИЕ!
 
 Для всех заданий используем один реакт проект (вы можете использовать `create-react-app` или скопировать уже существующий реакт проект).
-Каждое задание должно находиться в отдельной папке и разместить каждое задание в App.js разделив их тегом h1
+Каждое задание должно находиться в отдельной папке и разместить каждое задание в App.js разделив их тегом h1 -->
 
 1. Ваша задача реализовать список постов по данным API [{JSON} Placeholder](https://jsonplaceholder.typicode.com/).
    Шаги по реализации:
@@ -41,5 +41,6 @@
 - [Eще про рендерирнг реакта](https://bxnotes.ru/conspect/lib/react/react-notes/rendering/)
 - [useEffect](https://ru.reactjs.org/docs/hooks-effect.html)
 - [Краткий обзор хуков](https://ru.reactjs.org/docs/hooks-overview.html)
+- [Подъем состояния](https://ru.reactjs.org/docs/lifting-state-up.html)
 
-P.S. [Код из занятия](./todo-app)
+<!-- P.S. [Код из занятия](./todo-app) -->
